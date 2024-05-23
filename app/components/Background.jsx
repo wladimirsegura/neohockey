@@ -7,7 +7,7 @@ function Background() {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        // layout: "fill",
+        layout: "fill",
         width: "100vw",
         height: "100vh",
       }}
