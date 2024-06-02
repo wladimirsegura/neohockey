@@ -1,24 +1,23 @@
 "use client";
 import { Container, Heading, Section, Text } from "@radix-ui/themes";
-import Navbar from "./components/Navbar";
 import Standings from "./components/Standings";
-import BAckground from "./components/Background";
-import Navbar2 from "./components/Navbar2";
+import Background from "./components/Background";
+
+import Hero from "./components/Hero";
+import EventCalendar from "./components/EventCalendar";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
-  return (
-    <Container align={"center"}>
-      <BAckground />
+	return (
+		<Container size={4} align={"left"} className="max-2xl">
+			<Background />
+			<Navbar />
 
-      <Heading>
-        {/* <Navbar /> */}
-        <br />
-        <Navbar2 />
-      </Heading>
-      <Section size={4}>
-        <Heading>ようこそ！</Heading>
-      </Section>
-      {/* <Standings /> */}
-    </Container>
-  );
+			<Hero />
+			<a href="#schedule"></a>
+			<EventCalendar />
+			<a href="#standings"></a>
+			<Standings />
+		</Container>
+	);
 }
