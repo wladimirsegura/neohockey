@@ -12,32 +12,33 @@ import { Section } from "@radix-ui/themes";
 //   { make: "Toyota", model: "Corolla", price: 29600, electric: false },
 // ];
 
-function Standings() {
+function Schedule() {
 	// Row Data: The data to be displayed.
 	const [rowData, setRowData] = useState();
 
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
-		{ field: "名前" },
-		{ field: "チーム" },
-		{ field: "試合数" },
-		{ field: "ゴール数" },
+		{ field: "Date" },
+		{ field: "#" },
+		{ field: "A" },
+		{ field: "Score" },
+		{ field: "B" },
 	]);
 
 	const autoWidth = { flex: 1 };
 
 	useEffect(() => {
 		fetch(
-			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/kannami.json"
+			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule.json"
 		)
 			.then((result) => result.json())
 			.then((rowData) => setRowData(rowData));
 	}, []);
 
 	return (
-		<Section id="standings" className="bg-slate-300 w-full">
+		<Section id="standings">
 			<h1 className="bg-zinc-700 m-auto text-center align-middle p-4 w-full rounded-xl">
-				Standings / 順位表
+				Schedule / 日程表・試合結果
 			</h1>
 			<div
 				className="ag-theme-quartz max-w-screen-md m-auto align-middle items-center"
@@ -53,4 +54,4 @@ function Standings() {
 	);
 }
 
-export default Standings;
+export default Schedule;

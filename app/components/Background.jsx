@@ -1,13 +1,13 @@
 function Background() {
 	return (
 		<div
-			className="absolute bg-fixed opacity-20"
+			className="absolute bg-fixed left-0 opacity-20"
 			style={{
 				backgroundImage: `url('../images/HeroBackground.jpg')`,
-				backgroundPosition: "center",
-				backgroundSize: "cover",
+				backgroundPosition: "left",
+				backgroundSize: "fit",
 				backgroundRepeat: "no-repeat",
-				layout: "fill",
+				// layout: "fill",
 				width: "100vw",
 				height: "100vh",
 			}}

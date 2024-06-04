@@ -6,18 +6,22 @@ import Background from "./components/Background";
 import Hero from "./components/Hero";
 import EventCalendar from "./components/EventCalendar";
 import Navbar from "./components/Navbar";
+import Schedule from "./components/Schedule";
 
 export default function Home() {
 	return (
-		<Container size={4} align={"left"} className="max-2xl">
+		<div>
 			<Background />
-			<Navbar />
-
-			<Hero />
-			<a href="#schedule"></a>
-			<EventCalendar />
-			<a href="#standings"></a>
-			<Standings />
-		</Container>
+			<Container size={4}>
+				<Navbar />
+				<Hero />
+				<a href="#schedule"></a>
+				<Schedule />
+				<EventCalendar />
+				<a href="#standings"></a>
+				<Standings />
+				<div className="h-96 bg-slate-600"></div>
+			</Container>
+		</div>
 	);
 }
