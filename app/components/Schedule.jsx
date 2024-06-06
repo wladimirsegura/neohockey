@@ -2,27 +2,20 @@
 
 import { useState, useEffect } from "react";
 import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-quartz.css";
+import "./styles/ag-grid.css";
+import "./styles/ag-theme-balham.css";
 import { Section } from "@radix-ui/themes";
-
-// const InitialRowData = [
-//   { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-//   { make: "Ford", model: "F-Series", price: 33850, electric: false },
-//   { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-// ];
 
 function Schedule() {
 	// Row Data: The data to be displayed.
-	const [rowData, setRowData] = useState();
+	const [rowData2, setRowData2] = useState();
 
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
-		{ field: "Date" },
-		{ field: "#" },
-		{ field: "A" },
-		{ field: "Score" },
-		{ field: "B" },
+		{ field: "日付" },
+		{ field: "ホーム" },
+		{ field: "スコア" },
+		{ field: "アウェイ" },
 	]);
 
 	const autoWidth = { flex: 1 };
@@ -32,20 +25,20 @@ function Schedule() {
 			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule.json"
 		)
 			.then((result) => result.json())
-			.then((rowData) => setRowData(rowData));
+			.then((rowData2) => setRowData2(rowData2));
 	}, []);
 
 	return (
-		<Section id="standings">
+		<Section id="schedule">
 			<h1 className="bg-zinc-700 m-auto text-center align-middle p-4 w-full rounded-xl">
 				Schedule / 日程表・試合結果
 			</h1>
 			<div
-				className="ag-theme-quartz max-w-screen-md m-auto align-middle items-center"
+				className="ag-theme-balham max-w-screen-md m-auto align-middle items-center"
 				style={{ height: 500 }}
 			>
 				<AgGridReact
-					rowData={rowData}
+					rowData={rowData2}
 					columnDefs={colDefs}
 					defaultColDef={autoWidth}
 				/>

@@ -2,15 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-quartz.css";
+import "./styles/ag-grid.css";
+import "./styles/ag-theme-balham.css";
 import { Section } from "@radix-ui/themes";
-
-// const InitialRowData = [
-//   { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-//   { make: "Ford", model: "F-Series", price: 33850, electric: false },
-//   { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-// ];
 
 function Standings() {
 	// Row Data: The data to be displayed.
@@ -40,7 +34,7 @@ function Standings() {
 				Standings / 順位表
 			</h1>
 			<div
-				className="ag-theme-quartz max-w-screen-md m-auto align-middle items-center"
+				className="ag-theme-balham max-w-screen-md m-auto align-middle items-center"
 				style={{ height: 500 }}
 			>
 				<AgGridReact
