@@ -11,9 +11,9 @@ import {
 } from "date-fns";
 
 const events = [
-	{ date: "2024/5/27", title: "練習" },
-	{ date: "2024/5/28", title: "リーグ戦" },
-	{ date: "2024/6/12", title: "練習" },
+	{ date: "2024/6/17", title: "練習" },
+	{ date: "2024/6/12", title: "リーグ戦" },
+	{ date: "2024/6/10", title: "練習" },
 ];
 
 const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
@@ -31,7 +31,10 @@ const EventCalendar = () => {
 	const startingDayIndex = getDay(firstDayofMonth);
 
 	return (
-		<div id="calendar" className="container mx-auto p-4">
+		<div
+			id="calendar"
+			className="container mx-auto p-4 bg-slate-900 bg-opacity-80"
+		>
 			<div className="mb-4">
 				<h2 className="text-center">{format(currentDate, "MMMM yyyy")}</h2>
 			</div>

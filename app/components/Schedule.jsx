@@ -35,7 +35,7 @@ function Schedule() {
 			</h1>
 			<div
 				className="ag-theme-balham max-w-screen-md m-auto align-middle items-center"
-				style={{ height: 500 }}
+				style={{ height: 650 }}
 			>
 				<AgGridReact
 					rowData={rowData2}
