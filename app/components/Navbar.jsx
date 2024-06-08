@@ -30,7 +30,7 @@ const Navbar = () => {
 				</div>
 
 				<div
-					className={`md:flex md:items-center md:pb-0 md:h-auto h-screen pb-12 absolute md:static bg-slate-600 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0	pl-9 transition-all duration-500 ease-in ${
+					className={`md:flex md:items-center md:pb-0 md:h-auto h-screen cursor-pointer　pb-12 absolute md:static bg-slate-600 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0	pl-9 transition-all duration-500 ease-in ${
 						open ? "top-20 opacity-100 " : "top-[-300px]"
 					} md:opacity-100 opacity-0`}
 				>
@@ -38,7 +38,7 @@ const Navbar = () => {
 						<Link
 							onClick={() => setOpen(!open)}
 							to={menu.link}
-							className="text-slate-300 grid md:ml-7 md:text-xl md:my-0 my-7 hover:text-white duration:500"
+							className="text-slate-300 grid cursor-pointer md:ml-7 md:text-xl md:my-0 my-7 hover:text-white duration:500"
 							activeClass="text_gradient"
 							smooth={true}
 							spy={true}
