@@ -1,25 +1,26 @@
-import { Card } from "@radix-ui/themes";
+import { Card, Section } from "@radix-ui/themes";
 import Image from "next/image";
 
 const Hero = () => {
 	return (
-		<div
+		<Section
 			id="home"
-			className="bg-zinc-900 bg-opacity-80 grid lg:grid-cols-2 mt-16 rounded-md"
+			className="bg-zinc-900 bg-opacity-80 grid lg:grid-cols-2 mt-28 rounded-sm"
 		>
 			<Image
+				className="w-full"
 				src={"/images/LogoDark.net.png"}
-				width={670}
-				height={1}
+				width={400}
+				height={400}
 				alt="Logo"
 			/>
-			<Card>
+			<Card className="relative">
 				<p>函南小学校にて4年ぶりに開催します！</p>
-				<p className="text-4xl mb-4">函南ネオホッケーリーグ</p>
+				<p className="text-2xl md:text-4xl mb-4">函南ネオホッケーリーグ</p>
 				<p>日時：6月12日（水）20：15　開幕</p>
 				<p>参加者募集中（初心者大歓迎）</p>
 			</Card>
-		</div>
+		</Section>
 	);
 };
 export default Hero;

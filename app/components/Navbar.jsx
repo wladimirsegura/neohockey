@@ -9,7 +9,7 @@ import Image from "next/image";
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
-		<div className="shadow-md w-full fixed left-0">
+		<div className="shadow-md w-full fixed z-10 left-0">
 			<div className="md:flex items-center justify-between  bg-slate-600 py-4 md:px-12 px-5">
 				<div className="font-bold text-2xl md:text-lg max-w-screen-md cursor-pointer flex items-center text-slate-100">
 					<span className="mr-1">
@@ -36,6 +36,7 @@ const Navbar = () => {
 				>
 					{navLinks.map((menu, index) => (
 						<Link
+							onClick={() => setOpen(!open)}
 							to={menu.link}
 							className="text-slate-300 grid md:ml-7 md:text-xl md:my-0 my-7 hover:text-white duration:500"
 							activeClass="text_gradient"

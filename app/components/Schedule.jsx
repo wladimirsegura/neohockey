@@ -30,7 +30,7 @@ function Schedule() {
 
 	return (
 		<Section id="schedule">
-			<h1 className="bg-zinc-700 m-auto text-center align-middle p-4 w-full rounded-xl">
+			<h1 className="bg-zinc-700 m-auto text-center align-middle p-4 w-full rounded-sm">
 				Schedule / 日程表・試合結果
 			</h1>
 			<div
