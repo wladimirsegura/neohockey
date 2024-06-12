@@ -13,12 +13,12 @@ function Ranking() {
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
 		{ field: "-", width: 42 },
-		{ field: "#NAME", width: 110 },
+		{ field: "#NAME", width: 80 },
 		{ field: "TEAM", width: 110 },
-		{ field: "GP", width: 42 },
-		{ field: "G", width: 42 },
-		{ field: "A", width: 42 },
-		{ field: "P", width: 42 },
+		{ field: "GP", width: 32 },
+		{ field: "G", width: 32 },
+		{ field: "A", width: 32 },
+		{ field: "P", width: 32 },
 	]);
 
 	const autoWidth = { flex: 1 };
