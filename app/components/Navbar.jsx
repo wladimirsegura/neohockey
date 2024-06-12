@@ -10,18 +10,22 @@ const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
 		<div className="shadow-md w-full fixed z-10 left-0">
-			<div className="md:flex items-center justify-between  bg-slate-600 py-4 md:px-12 px-5">
-				<div className="font-bold text-2xl md:text-lg max-w-screen-md cursor-pointer flex items-center text-slate-100">
-					<span className="mr-1">
-						<Image
-							src={"/images/LogoDark.net.png"}
-							width={60}
-							height={60}
-							alt="small logo"
-						/>
-					</span>
-					Kannami NHLeague
-				</div>
+			<div className="md:flex items-center justify-between  bg-slate-600 p-4">
+				<Link
+					to="home"
+					smooth={true}
+					className="font-bold text-2xl max-w-screen-md cursor-pointer flex items-center text-slate-100"
+				>
+					<Image
+						src={"/images/K-NHL.net.png"}
+						width={60}
+						height={60}
+						alt="small logo"
+					/>
+					<Link to="home" smooth={true}>
+						Kannami NHLeague
+					</Link>
+				</Link>
 				<div
 					onClick={() => setOpen(!open)}
 					className="text-3xl absolute right-8 top-8 cursor-pointer md:hidden"

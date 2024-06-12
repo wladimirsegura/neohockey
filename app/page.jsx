@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import EventCalendar from "./components/EventCalendar";
 import Navbar from "./components/Navbar";
 import Schedule from "./components/Schedule";
+import Ranking from "./components/Ranking";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
@@ -14,12 +16,11 @@ export default function Home() {
 			<Container size={4}>
 				<Navbar />
 				<Hero />
-
 				<Schedule />
-				<Calendar />
-
 				<Standings />
-				<div className="h-96 bg-slate-600"></div>
+				<Ranking />
+				<Calendar />
+				<Footer />
 			</Container>
 		</div>
 	);

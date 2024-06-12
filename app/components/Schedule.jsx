@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { AgGridReact } from "ag-grid-react";
 import "./styles/ag-grid.css";
-import "./styles/ag-theme-balham.css";
+import "./styles/ag-theme-balham.min.css";
 import { Section } from "@radix-ui/themes";
 
 function Schedule() {
@@ -22,7 +22,7 @@ function Schedule() {
 
 	useEffect(() => {
 		fetch(
-			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule.json"
+			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule2.json"
 		)
 			.then((result) => result.json())
 			.then((rowData2) => setRowData2(rowData2));
@@ -34,7 +34,7 @@ function Schedule() {
 				Schedule / 日程表・試合結果
 			</h1>
 			<div
-				className="ag-theme-balham max-w-screen-md m-auto align-middle items-center"
+				className="ag-theme-balham-dark max-w-screen-md m-auto align-middle items-center"
 				style={{ height: 650 }}
 			>
 				<AgGridReact

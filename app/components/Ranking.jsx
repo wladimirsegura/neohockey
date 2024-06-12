@@ -6,26 +6,23 @@ import "./styles/ag-grid.css";
 import "./styles/ag-theme-balham.css";
 import { Section } from "@radix-ui/themes";
 
-function Standings() {
+function Ranking() {
 	// Row Data: The data to be displayed.
 	const [rowData, setRowData] = useState();
 
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
-		{ field: "-", width: 32 },
+		{ field: "-", width: 42 },
+		{ field: "#NAME", width: 110 },
 		{ field: "TEAM", width: 110 },
-		{ field: "GP", width: 32 },
+		{ field: "GP", width: 42 },
+		{ field: "G", width: 42 },
+		{ field: "A", width: 42 },
 		{ field: "P", width: 42 },
-		{ field: "W", width: 42 },
-		{ field: "L", width: 42 },
-		{ field: "T", width: 42 },
-		{ field: "GF", width: 42 },
-		{ field: "GA", width: 42 },
-		{ field: "+/-", width: 50 },
 	]);
 
 	const autoWidth = { flex: 1 };
-	const url = `https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/standings.json`;
+	const url = `https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/ranking.json`;
 
 	useEffect(() => {
 		fetch(url)
@@ -36,15 +33,10 @@ function Standings() {
 	return (
 		<Section id="standings" className=" m-auto max-w-screen-md">
 			<div className="bg-zinc-700 m-auto text-center p-4 rounded-sm">
-				<p className="text-3xl">Standings / 順位表</p>
-				<p className="text-sm">
-					G:ゲーム数 P:ポイント W:勝 L:負 T:引 GF:得点 GA:失点
-				</p>
+				<p className="text-3xl">Ranking / 個人成績</p>
+				<p className="text-sm mt-2">GP:ゲーム数 G:得点 A:アシスト P:ポイント</p>
 			</div>
-			<div
-				className="ag-theme-balham-dark max-w-screen-md m-auto align-middle items-center"
-				style={{ height: 250 }}
-			>
+			<div className="ag-theme-balham-dark mt-4" style={{ height: 400 }}>
 				<AgGridReact
 					rowData={rowData}
 					columnDefs={colDefs}
@@ -55,4 +47,4 @@ function Standings() {
 	);
 }
 
-export default Standings;
+export default Ranking;
