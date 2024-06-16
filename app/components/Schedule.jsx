@@ -29,12 +29,12 @@ function Schedule() {
 	}, []);
 
 	return (
-		<Section id="schedule">
-			<h1 className="bg-zinc-700 m-auto text-center align-middle p-4 w-full rounded-sm">
+		<Section id="schedule" className=" m-auto max-w-screen-md">
+			<div className="bg-zinc-700 m-auto text-center p-4 rounded-sm text-3xl">
 				Schedule / 日程表・試合結果
-			</h1>
+			</div>
 			<div
-				className="ag-theme-balham-dark max-w-screen-md m-auto align-middle items-center"
+				className="ag-theme-balham-dark max-w-screen-md mx-auto mt-4 align-middle items-center"
 				style={{ height: 650 }}
 			>
 				<AgGridReact

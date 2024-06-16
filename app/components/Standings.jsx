@@ -12,16 +12,16 @@ function Standings() {
 
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
-		{ field: "-", width: 32 },
-		{ field: "TEAM", width: 110 },
+		{ field: "-", width: 31 },
+		{ field: "TEAM", width: 109 },
 		{ field: "GP", width: 32 },
-		{ field: "P", width: 42 },
-		{ field: "W", width: 42 },
-		{ field: "L", width: 42 },
-		{ field: "T", width: 42 },
-		{ field: "GF", width: 42 },
-		{ field: "GA", width: 42 },
-		{ field: "+/-", width: 50 },
+		{ field: "P", width: 32 },
+		{ field: "W", width: 35 },
+		{ field: "L", width: 32 },
+		{ field: "T", width: 32 },
+		{ field: "GF", width: 41 },
+		{ field: "GA", width: 41 },
+		{ field: "+/-", width: 47 },
 	]);
 
 	const autoWidth = { flex: 1 };
@@ -41,15 +41,17 @@ function Standings() {
 					G:ゲーム数 P:ポイント W:勝 L:負 T:引 GF:得点 GA:失点
 				</p>
 			</div>
-			<div
-				className="ag-theme-balham-dark max-w-screen-md m-auto align-middle items-center"
-				style={{ height: 250 }}
-			>
-				<AgGridReact
-					rowData={rowData}
-					columnDefs={colDefs}
-					// defaultColDef={autoWidth}
-				/>
+			<div className=" bg-zinc-700 ">
+				<div
+					className="ag-theme-balham-dark max-w-[420px] mx-auto mt-4"
+					style={{ height: 250 }}
+				>
+					<AgGridReact
+						rowData={rowData}
+						columnDefs={colDefs}
+						// defaultColDef={autoWidth}
+					/>
+				</div>
 			</div>
 		</Section>
 	);

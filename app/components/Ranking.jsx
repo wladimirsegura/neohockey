@@ -13,7 +13,7 @@ function Ranking() {
 	// Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
 		{ field: "-", width: 42 },
-		{ field: "#NAME", width: 80 },
+		{ field: "#NAME", width: 60 },
 		{ field: "TEAM", width: 110 },
 		{ field: "GP", width: 32 },
 		{ field: "G", width: 32 },
@@ -36,12 +36,17 @@ function Ranking() {
 				<p className="text-3xl">Ranking / 個人成績</p>
 				<p className="text-sm mt-2">GP:ゲーム数 G:得点 A:アシスト P:ポイント</p>
 			</div>
-			<div className="ag-theme-balham-dark mt-4" style={{ height: 400 }}>
-				<AgGridReact
-					rowData={rowData}
-					columnDefs={colDefs}
-					// defaultColDef={autoWidth}
-				/>
+			<div className="bg-zinc-700">
+				<div
+					className="ag-theme-balham-dark max-w-[420px] mx-auto mt-4"
+					style={{ height: 400 }}
+				>
+					<AgGridReact
+						rowData={rowData}
+						columnDefs={colDefs}
+						// defaultColDef={autoWidth}
+					/>
+				</div>
 			</div>
 		</Section>
 	);
