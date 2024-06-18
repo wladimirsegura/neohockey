@@ -1,4 +1,4 @@
-import { Section } from "@radix-ui/themes";
+import { Badge, Section } from "@radix-ui/themes";
 import Image from "next/image";
 
 const Events = () => {
@@ -8,8 +8,11 @@ const Events = () => {
 				<p className="text-3xl">Events / イベント情報</p>
 			</div>
 			<div className="bg-zinc-700">
-				<p className="pl-4">
-					2024.6.16 ネオホッケー無料体験会 ＠函南町立西小学校 〉
+				<p className="pl-4 flex">
+					<Badge color="gray" className="mr-2">
+						2024/6/16
+					</Badge>
+					ネオホッケー無料体験会 ＠函南町立西小学校 〉
 				</p>
 				<Image
 					src={"/images/taikenkai20240616.png"}

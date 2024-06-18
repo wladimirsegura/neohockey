@@ -9,15 +9,17 @@ const Hero = () => {
 				<div className="text-center">
 					<p className="text-lg">函南小学校にて4年ぶりに開催中！</p>
 					<p className="text-3xl md:text-4xl">函南ネオホッケーリーグ</p>
-					<Badge color="blue" variant="solid">
-						更新！ 6/16
+
+					<Badge color="blue" variant="solid" className="mr-4">
+						更新！ 6/19
 					</Badge>
-					<Badge color="green"> イベント情報</Badge>
-					{/* <Badge color="green">順位表</Badge>
-					<Badge color="green">個人成績</Badge> */}
+					<Badge color="yellow" className="mr-2">
+						日程表
+					</Badge>
+					<Badge color="gray"> イベント情報</Badge>
 				</div>
 				<Image
-					className="w-4/5 mx-auto"
+					className="w-4/5 mx-auto mt-4"
 					src={"/images/K-NHL.net.png"}
 					width={835}
 					height={836}
@@ -26,7 +28,18 @@ const Hero = () => {
 			</div>
 			<Box className="relative  m-auto py-4 text-2xl h-max scroll-mb-10 ">
 				<Box className="text-sm max-w-xs my-10">
-					<p>Round1</p>
+					<p>
+						<Badge color="yellow" className="mr-2 mb-2">
+							2024/6/19
+						</Badge>
+						日程表更新： 9月/11月 変更有
+					</p>
+					<p>
+						<Badge color="gray" className="mr-2 mb-2">
+							2024/6/12
+						</Badge>
+						Round 1
+					</p>
 					<p>
 						久しぶりに復活するベテランや若手高校生にどのチームも人数不足で助っ人制度を利用して第1回目の試合に挑む!
 					</p>

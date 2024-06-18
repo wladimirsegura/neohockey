@@ -22,7 +22,7 @@ function Schedule() {
 
 	useEffect(() => {
 		fetch(
-			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule2.json"
+			"https://ofvxc14vdkffrabh.public.blob.vercel-storage.com/schedule3.json"
 		)
 			.then((result) => result.json())
 			.then((rowData2) => setRowData2(rowData2));
