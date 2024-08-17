@@ -37,13 +37,13 @@ function Standings() {
 		<Section id="standings" className=" m-auto max-w-screen-md">
 			<div className="bg-zinc-700 m-auto text-center p-4 rounded-sm">
 				<p className="text-3xl">Standings / 順位表</p>
-				<p className="text-sm">
+				<p className="text-sm mt-2">
 					G:ゲーム数 P:ポイント W:勝 L:負 T:引 GF:得点 GA:失点
 				</p>
 			</div>
 			<div className=" bg-zinc-700 ">
 				<div
-					className="ag-theme-balham-dark max-w-[420px] mx-auto mt-4"
+					className="ag-theme-balham-dark max-w-[500px] mx-auto mt-4"
 					style={{ height: 250 }}
 				>
 					<AgGridReact

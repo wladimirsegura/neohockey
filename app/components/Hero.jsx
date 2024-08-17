@@ -1,5 +1,6 @@
 import { Em, Badge, Box, Section, Strong } from "@radix-ui/themes";
 import Image from "next/image";
+import News from "./News";
 
 const Hero = () => {
 	return (
@@ -26,39 +27,8 @@ const Hero = () => {
 					alt="Logo"
 				/>
 			</div>
-			<Box className="relative  m-auto py-4 text-2xl h-max scroll-mb-10 ">
-				<Box className="text-sm max-w-xs my-10">
-					<p>
-						<Badge color="yellow" className="mr-2 mb-2">
-							2024/6/19
-						</Badge>
-						日程表更新： 9月/11月 変更有
-					</p>
-					<p>
-						<Badge color="gray" className="mr-2 mb-2">
-							2024/6/12
-						</Badge>
-						Round 1
-					</p>
-					<p>
-						久しぶりに復活するベテランや若手高校生にどのチームも人数不足で助っ人制度を利用して第1回目の試合に挑む!
-					</p>
-					<p>
-						開幕戦で<Strong>TUC</Strong>の高校生<Em> ゴータ </Em>選手と
-						<Em> セーヤ </Em>選手 の大活躍で６－１で勝利。
-						<Strong>いやさか</Strong>の<Em> 高橋 </Em>
-						選手が年齢感じない大きな活躍で１点を決めてチームの名誉を守った。二試合目で
-						<Strong>ヘベウデス</Strong>と<Strong>コンパネロス</Strong>
-						接戦続く中、後半に入ってフリーストロークで壁破って<Em> 池田 </Em>
-						選手が見事に決めて１－０で<Strong>コンパネロス</Strong>
-						が嬉しい初勝利を手にした。３試合目で<Strong>05ユニティーズ</Strong>
-						の素晴らしいパスワークと高い個人技でメンバー不足の
-						<Strong>ユニポリス</Strong>
-						相手に７－１で快適勝利。
-					</p>
-				</Box>
-				<p>参加者募集中（初心者大歓迎）</p>
-			</Box>
+			<News />
+
 		</Section>
 	);
 };
