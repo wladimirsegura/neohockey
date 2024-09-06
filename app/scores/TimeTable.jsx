@@ -1,11 +1,12 @@
 
 import { scoreData } from './scoreData'
 
-function TimeTable(event,court,game) {
+function TimeTable({eventDate, gameNumber, team}) {
 
-  const timeList= scoreData.filter(data=>data.event==event)
-  console.log(timeList)
-  console.log(scoreData.score)
+  const getScore = scoreData.find(e => e.event === eventDate && e.game === gameNumber)?.score || [];
+  console.log (getScore)
+ 
+
 
   const nameStyle = 'grid grid-cols-6 items-center justify-center m-1 bg-gray-900'
   
@@ -19,16 +20,17 @@ function TimeTable(event,court,game) {
       <p className='text-xs'>A2</p>
 
     </div>
-      {timeList.map((item, i) => (
+      {getScore.map((item, i) => (
+        item.team === team ?
         <div key={i} className={`${nameStyle}`}>
-          <p>{item.score.period}</p>
+          <p>{item.period}</p>
           <p className='col-span-2
-          '>{item.score.time}</p>
-          <p className='text-xs'>{item.score.goal}</p>
-          <p className='text-xs'>{item.score.a1}</p>
-          <p className='text-xs'>{item.score.a2}</p>
+          '>{item.time}</p>
+          <p className='text-xs'>{item.goal}</p>
+          <p className='text-xs'>{item.a1}</p>
+          <p className='text-xs'>{item.a2}</p>
 
-        </div>
+        </div>:null
       ))}
 
   </section>

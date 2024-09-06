@@ -33,32 +33,17 @@ function Scores() {
           <TeamRoaster teamName="ヘベウデス" />
         </div>
         <section className='timeline grid grid-cols-2 col-span-5 h-min'>
-          <div className='timelineLeft grid grid-cols-6 border mx-2 p-1  bg-slate-500 '>
-            <p>P</p>
-            <p className='col-span-2'>Time</p>
-            <p>G</p>
-            <p>A</p>
-            <p>A</p>
-            <p>1</p>
-            <p className='col-span-2'>3:45</p>
-            <p>96</p>
-            <p>23</p>
-            <p>-</p>
-            <p>1</p>
-            <p className='col-span-2'>3:45</p>
-            <p>96</p>
-            <p>23</p>
-
+          <div>
+            <TimeTable eventDate='2024-06-12' gameNumber='1' team='TUC'/>
           </div>
-          <TimeTable event='2024-06-12' court="A" game='1' />
+          <div>
+            <TimeTable eventDate='2024-06-12' gameNumber='1' team='いやさか'/>
+          </div>
         </section>
-        <div className='col-span-2'>
-        <TeamRoaster teamName="TUC"/>
-        </div>
+          <div className='col-span-2'>
+          <TeamRoaster teamName="TUC"/>
+          </div>
       </section>
-      <div>
-        
-      </div>
     </div>
   )
 }
