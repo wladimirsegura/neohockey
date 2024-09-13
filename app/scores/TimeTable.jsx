@@ -4,7 +4,7 @@ import { scoreData } from './scoreData'
 function TimeTable({eventDate, gameNumber, team}) {
 
   const getScore = scoreData.find(e => e.event === eventDate && e.game === gameNumber)?.score || [];
-  console.log (getScore)
+
  
 
 
