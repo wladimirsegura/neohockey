@@ -4,6 +4,7 @@ import InputScore from './InputScore'
 import { roaster } from './roaster'
 import TeamRoaster from './TeamRoaster'
 import TimeTable from './TimeTable'
+import MyComponent from '../components/MyComponent'; // Import the new component
 import { useEffect, useState } from 'react'
 import { Button } from '@radix-ui/themes'
 import { SlSizeFullscreen } from "react-icons/sl";
@@ -89,6 +90,7 @@ function Scores() {
             <TeamRoaster teamName={rightTeam}/>
             </div>
         </section>
+      <MyComponent /> {/* Render the new component */}
 
     </div>
   )
