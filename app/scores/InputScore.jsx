@@ -1,56 +1,48 @@
-import { Dialog, Button, Flex, Text, TextField } from "@radix-ui/themes"
+"use client";
+import { Button, DropdownMenu } from "@radix-ui/themes";
+import { roaster } from "./roaster";
+import { set } from "mongoose";
+import { useState } from "react";
 
-function InputScore() {
-  return (
-    <div>
-      
-      <Dialog.Root>
-  <Dialog.Trigger>
-    <Button>Edit profile</Button>
-  </Dialog.Trigger>
+const nameStyle =
+	"grid grid-cols-7 items-center justify-center m-1 bg-slate-900";
 
-  <Dialog.Content maxWidth="450px">
-    <Dialog.Title>Edit profile</Dialog.Title>
-    <Dialog.Description size="2" mb="4">
-      Make changes to your profile.
-    </Dialog.Description>
+function InputScore({ team, title, pos }) {
+	let [newScore, setNewScore] = useState(["", "", ""]);
+	const listUp = roaster.filter((data) => data.team == team);
 
-    <Flex direction="column" gap="3">
-      <label>
-        <Text as="div" size="2" mb="1" weight="bold">
-          Name
-        </Text>
-        <TextField.Root
-          defaultValue="Freja Johnsen"
-          placeholder="Enter your full name"
-        />
-      </label>
-      <label>
-        <Text as="div" size="2" mb="1" weight="bold">
-          Email
-        </Text>
-        <TextField.Root
-          defaultValue="freja@example.com"
-          placeholder="Enter your email"
-        />
-      </label>
-    </Flex>
+	return (
+		<div>
+			<DropdownMenu.Root>
+				<p className="mb-2">
+					{title}: {newScore[pos]}
+				</p>
 
-    <Flex gap="3" mt="4" justify="end">
-      <Dialog.Close>
-        <Button variant="soft" color="gray">
-          Cancel
-        </Button>
-      </Dialog.Close>
-      <Dialog.Close>
-        <Button>Save</Button>
-      </Dialog.Close>
-    </Flex>
-  </Dialog.Content>
-</Dialog.Root>
-
-    </div>
-  )
+				<DropdownMenu.Trigger>
+					<Button variant="soft" size={"4"}>
+						{title}
+						<DropdownMenu.TriggerIcon />
+					</Button>
+				</DropdownMenu.Trigger>
+				<DropdownMenu.Content>
+					{listUp.map((item, i) => (
+						<DropdownMenu.Item
+							key={i}
+							onSelect={() => {
+								let newValue = [...newScore];
+								newValue[pos] = item.number;
+								setNewScore(newValue);
+							}}
+							className="my-2"
+						>
+							<p className="text-3xl">{item.number}</p>
+							<p className="text-2xl">{item.name}</p>
+						</DropdownMenu.Item>
+					))}
+				</DropdownMenu.Content>
+			</DropdownMenu.Root>
+		</div>
+	);
 }
 
-export default InputScore
+export default InputScore;
