@@ -1,8 +1,8 @@
-import { getNewsById } from "@/lib/data";
+import { getNewsById } from "../lib/data";
 import HeadingText from "../../parts/HeadingText";
 import Input from "../../parts/Input";
 import Navbar from "../../parts/Navbar";
-import { editNews } from "@/lib/action";
+import { editNews } from "../lib/action";
 
 const SingleNews = async ({ params }) => {
 	const { id } = params;

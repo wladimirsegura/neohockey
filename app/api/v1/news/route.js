@@ -1,5 +1,5 @@
-import db from "@/lib/db";
-import News from "@/models/News";
+import db from "../lib/db";
+import News from "../models/News";
 import { NextResponse } from "next/server";
 
 export async function GET() {

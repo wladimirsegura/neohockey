@@ -1,9 +1,9 @@
 import Navbar from "./parts/Navbar";
 import HeadingText from "./parts/HeadingText";
-import { getNews } from "@/lib/data";
+import { getNews } from "../lib/data";
 import { FiTrash, FiEdit } from "react-icons/fi";
 import Link from "next/link";
-import { deleteNews } from "@/lib/action";
+import { deleteNews } from "../lib/action";
 
 const styleForm =
 	"px-4 py-3 title-font text-center tracking-wider font-medium text-grey-700 text-sm bg-gray-700 rounded border-gray-500 ";
