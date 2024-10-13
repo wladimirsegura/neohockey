@@ -4,7 +4,6 @@ import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import { Analytics } from "@vercel/analytics/react";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,14 +16,10 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={inter.className}>
 				<Theme appearance="dark">
-					<header>
-						
-					</header>
-					<main>
-						{children}
-					</main>
+					<header></header>
+					<main>{children}</main>
 				</Theme>
-				<Analytics />
+				<Analytics mode={"production"} />;
 			</body>
 		</html>
 	);

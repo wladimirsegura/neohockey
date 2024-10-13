@@ -18,6 +18,7 @@ const Events = () => {
 					src={"/images/taikenkai20240616.png"}
 					width={566}
 					height={800}
+					priority={false}
 					alt="taikennkai"
 					className="mt-4 mx-auto py-4"
 				/>

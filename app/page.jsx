@@ -1,4 +1,3 @@
-"use client";
 import { Container, Heading, Section, Text } from "@radix-ui/themes";
 import Standings from "./components/Standings";
 import Calendar from "./components/Calendar";

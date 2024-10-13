@@ -1,6 +1,6 @@
-import { Em, Badge, Box, Section, Strong } from "@radix-ui/themes";
+import { Badge, Section } from "@radix-ui/themes";
 import Image from "next/image";
-import News from "./News";
+import News2 from "./News2";
 
 const Hero = () => {
 	return (
@@ -25,10 +25,10 @@ const Hero = () => {
 					width={835}
 					height={836}
 					alt="Logo"
+					priority={true}
 				/>
 			</div>
-			<News />
-
+			<News2 />
 		</Section>
 	);
 };
