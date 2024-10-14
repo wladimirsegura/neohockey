@@ -1,7 +1,7 @@
 import { getNewsById } from "/lib/data";
-import HeadingText from "/news/parts/HeadingText";
-import Input from "/news/parts/Input";
-import Navbar from "/news/parts/Navbar";
+import HeadingText from "../../parts/HeadingText";
+import Input from "../../parts/Input";
+import Navbar from "../../parts/Navbar";
 import { editNews } from "/lib/action";
 
 const SingleNews = async ({ params }) => {
