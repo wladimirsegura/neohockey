@@ -1,5 +1,6 @@
-import { Badge, Section } from "@radix-ui/themes";
+import { Badge, Container, Section } from "@radix-ui/themes";
 import Image from "next/image";
+import logo from "../../public/images/K-NHL.net.png";
 import News2 from "./News2";
 
 const Hero = () => {
@@ -20,15 +21,15 @@ const Hero = () => {
 					<Badge color="gray"> イベント情報</Badge>
 				</div>
 				<Image
-					className="w-4/5 mx-auto mt-4"
-					src={"/images/K-NHL.net.png"}
-					width={835}
-					height={836}
+					className="w-3/5 mx-auto mt-4"
+					src={logo}
 					alt="Logo"
 					priority={true}
 				/>
 			</div>
-			<News2 />
+			<Container className="m-auto">
+				<News2 />
+			</Container>
 		</Section>
 	);
 };

@@ -1,5 +1,5 @@
 import { Badge, Box } from "@radix-ui/themes";
-import { getNews } from "../lib/data";
+import { getNews } from "/lib/data";
 
 const News2 = async () => {
 	const news = await getNews();
