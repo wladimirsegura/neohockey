@@ -30,23 +30,23 @@ const page = async () => {
 							</tr>
 						</thead>
 						<tbody>
-							{allNews.map((news) => (
-								<tr key={news._id}>
+							{allNews.map((item) => (
+								<tr key={item._id}>
 									<td className="border-t-2 text-center border-grey-200 px-4 py-3 ">
-										{new Date(news.date).toLocaleDateString()}
+										{new Date(item.date).toLocaleDateString()}
 									</td>
 									<td className="border-t-2 text-center border-grey-200 px-4 py-3 ">
-										{news.title}
+										{item.title}
 									</td>
 									<td className="border-t-2 text-center border-grey-200 px-4 py-3 ">
-										{news.content}
+										{item.content}
 									</td>
 									<td className="border-t-2 text-center border-grey-200 px-4 py-3 flex justify-center item-center gap-2">
-										<Link href={`/news/edit/${news._id}`}>
+										<Link href={`/item/edit/${item._id}`}>
 											<FiEdit className="mt-1" />
 										</Link>
 										<form action={deleteNews}>
-											<input type="hidden" name="id" value={news._id} />
+											<input type="hidden" name="id" value={item._id} />
 											<button
 												type="submit"
 												className="text-red-500 p-1 rounded-md"

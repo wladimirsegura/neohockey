@@ -2,12 +2,12 @@ import { Badge, Box } from "@radix-ui/themes";
 import { getNews } from "/lib/data";
 
 const News2 = async () => {
-	const news = await getNews();
+	const newsList = await getNews();
 
 	return (
 		<Box className="relative m-auto py-4 text-2xl h-max scroll-mb-10 ">
 			<Box className="relative m-auto py-4 text-2xl h-max scroll-mb-10 ">
-				{news.map((n) => (
+				{newsList.map((n) => (
 					<Box key={n._id} className="text-sm max-w-xs my-10">
 						<p>
 							<Badge color="yellow" className="mr-2 mb-2">
