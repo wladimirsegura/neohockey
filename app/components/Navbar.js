@@ -7,6 +7,7 @@ import { SiCodementor } from "react-icons/si";
 import { navLinks } from "./data";
 import { Link } from "react-scroll";
 import Image from "next/image";
+// import Refresh from "./Refresh";
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	return (
@@ -23,10 +24,13 @@ const Navbar = () => {
 						height={60}
 						alt="small logo"
 					/>
-					<Link to="home" smooth={true}>
-						Kannami NHLeague
-					</Link>
 				</Link>
+				<Link to="home" smooth={true} className="text-2xl cursor-pointer">
+					Kannami NHLeague
+				</Link>
+				{/* <div className="ml-4 flex items-center">
+					<Refresh />
+				</div> */}
 				<div
 					onClick={() => setOpen(!open)}
 					className="text-3xl absolute right-8 top-8 cursor-pointer md:hidden"

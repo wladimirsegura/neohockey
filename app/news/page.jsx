@@ -10,7 +10,7 @@ const styleForm =
 
 const page = async () => {
 	const allNews = await getNews();
-	console.log(allNews);
+
 	return (
 		<main>
 			<HeadingText
@@ -42,7 +42,8 @@ const page = async () => {
 										{item.content}
 									</td>
 									<td className="border-t-2 text-center border-grey-200 px-4 py-3 flex justify-center item-center gap-2">
-										<Link href={`/item/edit/${item._id}`}>
+										{/* <Link href={`/item/edit/${item._id}`}> */}
+										<Link href={`/news/edit/${item._id}`}>
 											<FiEdit className="mt-1" />
 										</Link>
 										<form action={deleteNews}>

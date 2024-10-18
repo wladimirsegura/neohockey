@@ -7,11 +7,13 @@ import Ranking from "./components/Ranking";
 import Footer from "./components/Footer";
 import Events from "./components/Events";
 import Navbar from "./components/Navbar";
+import Test from "./components/test";
 
 const Home = () => {
 	return (
 		<div className="bg-[url('/images/HeroBackground.jpg')] bg-center bg-fixed md:bg-cover h-full bg-inherit overflow-hidden">
 			<Container size={4}>
+				<Test />
 				<Navbar />
 				<Hero />
 				<Events />

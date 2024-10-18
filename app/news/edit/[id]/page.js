@@ -7,6 +7,7 @@ import HeadingText from "../../parts/HeadingText";
 const SingleNews = async ({ params }) => {
 	const { id } = params;
 	const newsEdit = await getNewsById(id);
+	const idEdit = newsEdit._id;
 
 	return (
 		<section>
@@ -15,7 +16,7 @@ const SingleNews = async ({ params }) => {
 			<div className="flex flex-col gap-4 justify-center items-center">
 				<form action={editNews} className="flex flex-col gap-2">
 					<div className="pb-2">
-						<input type="hidden" name="id" value={newsEdit._id} />
+						<input type="hidden" name="id" value={idEdit} />
 						<label className="text-xl font-bold">タイトル</label>
 						<Input placeholder={newsEdit.title} type="text" name="title" />
 					</div>
