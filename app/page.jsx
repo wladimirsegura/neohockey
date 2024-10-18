@@ -7,7 +7,7 @@ import Ranking from "./components/Ranking";
 import Footer from "./components/Footer";
 import Events from "./components/Events";
 import Navbar from "./components/Navbar";
-import Test from "./components/test";
+import Test from "./components/Test";
 
 const Home = () => {
 	return (
