@@ -10,7 +10,7 @@ export const metadata = {
 	title: "Kannami League",
 	description: "Created by W.Segura",
 };
-
+export const dynamic = "force-dynamic";
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">

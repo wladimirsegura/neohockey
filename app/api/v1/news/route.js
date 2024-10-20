@@ -2,6 +2,8 @@ import db from "/lib/db";
 import news from "@/models/news";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
 	try {
 		db.connect();
