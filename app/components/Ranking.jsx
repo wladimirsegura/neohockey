@@ -15,7 +15,6 @@ function Ranking() {
 		{ field: "-", width: 42 },
 		{ field: "#NAME", width: 90 },
 		{ field: "TEAM", width: 110 },
-		// { field: "GP", width: 32 },
 		{ field: "G", width: 32 },
 		{ field: "A", width: 32 },
 		{ field: "P", width: 32 },
