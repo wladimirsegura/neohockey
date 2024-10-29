@@ -15,7 +15,7 @@ function Ranking() {
 		{ field: "-", width: 42 },
 		{ field: "#NAME", width: 90 },
 		{ field: "TEAM", width: 110 },
-		{ field: "GP", width: 32 },
+		// { field: "GP", width: 32 },
 		{ field: "G", width: 32 },
 		{ field: "A", width: 32 },
 		{ field: "P", width: 32 },
@@ -23,7 +23,7 @@ function Ranking() {
 
 	const autoWidth = { flex: 1 };
 	useEffect(() => {
-		fetch("https://www.k-nhl.net/api/v1/ranking", { cache: "no-cache" })
+		fetch("https:/www.k-nhl.net/api/v1/ranking", { cache: "no-cache" })
 			.then((result) => result.json())
 			.then((rowData) => setRowData(rowData));
 	}, []);
