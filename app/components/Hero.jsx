@@ -13,12 +13,12 @@ const Hero = () => {
 					<p className="text-3xl md:text-4xl">函南ネオホッケーリーグ</p>
 
 					<Badge color="blue" variant="solid" className="mr-4">
-						更新！ 6/19
+						更新！ 10/30
 					</Badge>
 					<Badge color="yellow" className="mr-2">
-						日程表
+						個人成績
 					</Badge>
-					<Badge color="gray"> イベント情報</Badge>
+					<Badge color="gray"> 日程表・順位表</Badge>
 				</div>
 				<Image
 					className="w-3/5 mx-auto mt-4"
