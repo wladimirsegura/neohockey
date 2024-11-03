@@ -11,7 +11,7 @@ export async function GET() {
 		const database = client.db("crud_db");
 
 		// Choose a name for your collection
-		const collection = database.collection("standings");
+		const collection = database.collection("players");
 		const allData = await collection.find({}).toArray();
 		return NextResponse.json(allData);
 	} catch (error) {

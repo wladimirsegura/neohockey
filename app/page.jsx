@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Events from "./components/Events";
 import Navbar from "./components/Navbar";
 import Test from "./components/Test";
+import ListPlayers from "./components/ListPlayers";
 
 const Home = () => {
 	return (

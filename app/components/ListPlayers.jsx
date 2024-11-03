@@ -7,22 +7,23 @@ import { Section } from "@radix-ui/themes";
 
 export const dynamic = "force-dynamic";
 
-function Schedule() {
+function ListPlayers() {
 	//Row Data: The data to be displayed.
 	const [rowData2, setRowData2] = useState();
 
 	//Column Definitions: Defines & controls grid columns.
 	const [colDefs, setColDefs] = useState([
-		{ field: "date" },
-		{ field: "home" },
-		{ field: "score" },
-		{ field: "away" },
+		{ field: "NAME" },
+		{ field: "#" },
+		{ field: "TEAM" },
+		{ field: "G" },
+		{ field: "A" },
 	]);
 
 	const autoWidth = { flex: 1 };
 
 	useEffect(() => {
-		fetch("/api/v1/schedule", {
+		fetch("/api/v1/players", {
 			cache: "no-cache",
 		})
 			.then((result) => result.json())
@@ -50,4 +51,4 @@ function Schedule() {
 	);
 }
 
-export default Schedule;
+export default ListPlayers;

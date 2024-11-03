@@ -1,9 +1,9 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
 
-// export const dynamic = "force-dynamic";
-
-export async function GET() {
+export async function GET(request, { params }) {
+	const stats = (await params).stats;
+	console.log(stats);
 	const client = new MongoClient(process.env.MONGODB_URI);
 
 	try {
@@ -13,7 +13,7 @@ export async function GET() {
 		const database = client.db("crud_db");
 
 		// Choose a name for your collection
-		const collection = database.collection("ranking");
+		const collection = database.collection(stats);
 		const allData = await collection.find({}).toArray();
 		return NextResponse.json(allData);
 	} catch (error) {

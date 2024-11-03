@@ -22,7 +22,7 @@ function Ranking() {
 
 	const autoWidth = { flex: 1 };
 	useEffect(() => {
-		fetch("https://www.k-nhl.net/api/v1/ranking", { cache: "no-cache" })
+		fetch("/api/v1/ranking", { cache: "no-cache" })
 			.then((result) => result.json())
 			.then((rowData) => setRowData(rowData));
 	}, []);
